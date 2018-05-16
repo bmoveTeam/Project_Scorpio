@@ -1,0 +1,123 @@
+/*
+*	
+*	Description ........ 
+*	by ........ 
+*
+*/
+
+device.screenAlwaysOn(true); // No apagar la pantalla
+ui.screenOrientation('landscape'); // Modo apaisado
+ui.screenMode("immersive"); // Esconde la barra de notificaciones del dispositivo para mostrar toda la información posible.
+
+/**************
+   Funciones
+**************/
+var bluetoothOn=0; // Variable que almacena el estado (conectado/no conectado o 1,0) del bluetooth
+var btClient; // "objeto" que usaremos para conectar,desconectar y trabajar con el bluetooth
+var btnConectar = ui.addButton("Conectar bluetooth", 150, 150,300,120).onClick(function() { // Creamos el botón del bluetooth
+    btClient = network.bluetooth.connectSerial(function(status) { // Conectamos btClient -- Mostrará una lista de los dispositivos enlazados previamente
+    console.log("connected " + status); // Debug
+        if (status === true){ // Si esta conectado
+            console.log(status); // guardamos el estado 
+            bluetoothOn  = 1;  // Cambiamos la variable de estado a conectado (1)
+            ui.jump(btnConectar); // Hacemos que el boon "salte" 
+            ui.alpha(btnConectar, 0); // Hacemos completamente transparente el botón
+            media.playSound("Drago"); // Reproducimos el sonido almacenado previamente.
+            device.vibrate(750); // Hacemos que vibre el dispositivo
+        }
+    });
+});
+
+var btnDesconectar = ui.addButton("Desconectar", 450, 150,380,120).onClick(function() { // Creamos el botón de conectar
+    btClient.disconnect(); // Desconectamos una vez se ha pulsado
+    bluetoothOn=0; // Cambiamos la variable de estado a desconectado (0)
+    ui.alpha(btnConectar, 255); // Cambiamos la transparencia del botón a opaco
+    ui.jump(btnDesconectar); // Hacemos que "salte" el botón de desconectar
+});
+
+function send(str) { // Función que utilizamos para enviar un string (cadena de caracteres)
+    if (bluetoothOn == 1) { // Si el bluetooth está conectado, se ejecuta el código de las siguientes lineas
+       btClient.send("="+str+"+"); // Enviamos la cadena de caracteres entre los simbolos = y +
+       console.log("="+str+"+"); // Mostramos en la consola la cadena de caracteres que se esta enviando.
+   }
+}
+
+
+/********************
+    ui dispositivo
+********************/
+
+//Creamos los elementos que van a pertenecer a la interfaz de usuario del dispositivo móvil.
+
+w=200, h=120; // Variables que se utilizan para el ancho(w) y alto (h) de los elementos en pantalla.
+x=800, y=50; // Variables de posición que se utilizan para colocar los elementos en pantalla.
+ 
+var imgBQ = ui.addImage( "CA7.jpg",x+4*w, y+2.2*w, 250, 250); // Añadimos el logo de bq (imagen). Parametros: ("Ruta",posición X, posición Y,ancho,alto);
+
+var btnSiguelineas = ui.addButton("Sigue lineas",150, 350, w, h+50).onClick(function(){ // Creamos el botón. Parametros: ("texto a mostrar",posición X, posicionY, ancho, alto)
+    send("siguelineas"); // Pasamos como parámetro a la función send (enviar en inglés) la palabra siguelineas, que se recibirá completamente en Arduino.
+});
+
+var btnSigueluz = ui.addButton("Sigue luz",350, 350, w, h+50).onClick(function(){ 
+    send("sigueluz");
+});
+
+var btnObstaculos = ui.addButton("Obstaculos",150, 550, w+140, h).onClick(function(){ 
+    send("obstaculos");
+});
+
+var btnAvanzar = ui.addButton("W", x+w, y+w, w, w).onClick(function(){ 
+    send("avanzar");
+});
+var btnRetroceder = ui.addButton("S", x+w, y+3*w, w, w).onClick(function(){ 
+    send("retroceder");
+});
+var btnIzquierda = ui.addButton("A", x, y+2*w, w, w).onClick(function(){ 
+    send("izquierda");
+});
+var btnDerecha = ui.addButton("D", x+2*w, y+2*w, w, w).onClick(function(){ 
+    send("derecha");
+});
+var btnParar = ui.addButton("X", x+w, y+2*w, w, w).onClick(function(){ 
+    send("parar");
+});
+
+var btn180 = ui.addImageButton(x+2*w, y+3*w, w, w, "180.png",false).onClick(function(){  // Creamos un botón con imagen. Parámetros: (posiciónX,posiciónY,ancho,alto,"ruta de la imagen",true/false)
+    send("180");
+});
+var btnMB = ui.addButton("Musica",480, 550, 250,120).onClick(function(){ 
+    send("Musica");
+});
+
+/********************
+      ui dashboard
+********************/
+//Creamos la interfaz de usuario del dashboard
+dashboard.show(false); // No mostrar el dashboard de manera automática al ejecutar el programa (cambiar a true en caso de si querer mostrarlo)
+dashboard.backgroundColor("#EE000000");
+
+
+w=100, h=100; // Variables que se utilizan para el ancho(w) y alto (h) de los elementos en pantalla.
+x=600, y=50;  // Variables de posición que se utilizan para colocar los elementos en pantalla.
+
+input = dashboard.addInput("say it", y, 2*(y+h), x-y, 2*y).onSubmit(function(val) { // Incluimos en el dashboard este cuadro de texto para que se reproduzca lo que escribamos en el móvil o tablet.
+    console.log(val);
+    media.textToSpeech(val);
+    device.vibrate(100);
+});
+
+var var66 = dashboard.addButton("^", x+w, y+h, w, h).onClick(function(){  // Añadimos un botón al dashboard. Los parámetros son los mismos que para los botones de la UI.
+    send("avanzar");
+});
+var var67 = dashboard.addButton("v", x+w, y+3*h, w, h).onClick(function(){ 
+    send("retroceder");
+});
+var var68 = dashboard.addButton("<", x, y+2*h, w, h).onClick(function(){ 
+    send("izquierda");
+});
+var var69 = dashboard.addButton(">", x+2*w, y+2*h, w, h).onClick(function(){ 
+    send("derecha");
+});
+var var610 = dashboard.addButton("O", x+w, y+2*h, w, h).onClick(function(){ 
+    send("parar");
+});
