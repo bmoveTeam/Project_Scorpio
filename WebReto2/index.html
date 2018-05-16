@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>B-move | Web</title>
+  <link rel="icon" type="img/png" sizes="96x96" href="img/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Timmana" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+  <link rel="stylesheet" href="animate.min.css">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+</head>
+<body id="miWeb" data-spy="scroll" data-target=".navbar" data-offset="50">
+<!--Diseñamos el menu-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <!--Diseño movil-->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <!--Fin diseño movil-->
+        <a class="navbar-brand" href="index.html"><img src="img/bmove1.png" alt=""></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#miWeb">INICIO</a></li>
+          <li><a href="#team">TEAM</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">RETO
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#sobre">Sobre el reto</a></li>
+              <li><a href="#red">Esquema red</a></li>
+              <li><a href="#untangle">Untangle</a></li>
+              <li><a href="#router">Router</a></li>
+              <li><a href="#owncloud">Owncloud</a></li>
+            </ul>
+          </li>
+          <li><a href="#robot">ROBOT</a></li>
+          <li><a href="#video">VIDEO</a></li>
+          <!-- <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!--Fin menu-->
+<!--Inicio Galeria-->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+ <!-- Indicators -->
+ <ol class="carousel-indicators">
+   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+   <li data-target="#myCarousel" data-slide-to="1"></li>
+   <li data-target="#myCarousel" data-slide-to="2"></li>
+ </ol>
+ <!-- Wrapper for slides -->
+ <div class="carousel-inner" role="listbox">
+   <div class="item active">
+     <img src="img/img1.png" alt="1">
+   </div>
+   <div class="item">
+     <img src="img/img2.png" alt="2">
+   </div>
+   <div class="item">
+     <img src="img/img3-2.png" alt="2">
+   </div>
+ </div>
+ <!-- Left and right controls -->
+ <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+   <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+   <span class="sr-only">Previous</span>
+ </a>
+ <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+   <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+   <span class="sr-only">Next</span>
+ </a>
+</div>
+<!--Fin Galeria-->
+<button onclick="topFunction()" id="btnup" title="Ir arriba"><img src="img/flecha.png"></button>
+<!--Contenedor el equipo-->
+<div id="team" class="container text-center">
+    <h3>B-MOVE</h3>
+  <p>Somo b-move, el bueno, no los que hacen cajas de ordenadores, que esos no saben nah</p>
+  <div class="row">
+    <div class="col-sm-4">
+      <p><strong>Xabier</strong></p><br>
+      <img src="img/persona.png" class="img-circle persona" alt="Random Name">
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Alejandro</strong></p><br>
+      <img src="img/persona.png" class="img-circle persona" alt="Random Name">
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Abraham</strong></p><br>
+      <img src="img/persona.png" class="img-circle persona" alt="Random Name">
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Egoitz</strong></p><br>
+      <img src="img/persona.png" class="img-circle persona" alt="Random Name">
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Oihane</strong></p><br>
+      <img src="img/persona.png" class="img-circle persona" alt="Random Name">
+    </div>
+    <div class="col-sm-4">
+      <p><strong>Yeray</strong></p><br>
+      <img src="img/persona.png" class="img-circle persona" alt="Random Name">
+    </div>
+  </div>
+</div>
+<!--Contenedor Sobre el reto-->
+<div id="sobre" class="container text-center">
+  <center><h3>INFORMACION SOBRE EL RETO</h3></center>
+  <h3>Reto 8:roboAlmi</h3>
+  <P>En este reto necesitamos 4 ordenadores. En un ordenador deberemos instalar Untangle, un sistema operativo para hacer un portal cautivo y tendrá 2 tarjetas de red.  En otro ordenador instalaremos Owncloud y crearemos un DNS con el nombre del grupo. También necesitaremos dos Robots con arduino para que uno sea un siguelineas y otro para controlarlo con el móvil. Crearemos una Wifi segura para que no se pueda hackear el robot. Haremos un video presentación de los robots y una web presentación del reto. Justo debajo esta es la arquitectura de red que hemos usado utilizando Packet Tracer</P>
+  </div>
+  <div id="red" class="container text-center">
+  <h3>ESTO ES UNA PRUEBA DEL SCROLL RED</h3>
+  <img class="esc img-fluid" src="img/red.png" alt="">
+  </div>
+  <div id="untangle" class="container text-center">
+    <h3>ESTO ES UNA PRUEBA DEL SCROLL UNTANGLE</h3>
+  </div>
+  <div id="router" class="container text-center">
+    <h3>ESTO ES UNA PRUEBA DEL SCROLL ROUTER</h3>
+  </div>
+  <div id="owncloud" class="container text-center">
+    <h3>ESTO ES UNA PRUEBA DEL SCROLL OWNCLOUD</h3>
+
+  <section>
+    <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
+    <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
+    <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
+  </div>
+  <div id="robot" class="container text-center">
+  <h3>ESTO ES UNA PRUEBA DEL SCROLL ROBOT</h3>
+  <section>
+    <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
+    <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
+    <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
+    <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
+  </section>
+  </div>
+<div id="video" class="container text-center">
+  <h3>ESTO ES UNA PRUEBA DEL SCROLL VIDEO</h3>
+  <div class="video-container">
+  <center><iframe width="560" height="315" src="https://www.youtube.com/embed/3Wn5kwiqOIs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+</div>
+</div>
+</body>
+<!--Fin cabecera-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/irarriba.js"></script>
+<script type="text/javascript" src="js/suavizado.js"></script>
+</html>
