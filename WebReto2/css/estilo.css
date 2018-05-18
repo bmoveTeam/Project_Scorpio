@@ -46,7 +46,7 @@ body {
 }
 /* Color menus del dropdown */
 .dropdown-menu li a {
-	color: #000 !important;
+	color: #f00 !important;
 }
 /* Cuando pasas por encima de los menus del dropdown*/
 .dropdown-menu li a:hover {
@@ -61,6 +61,12 @@ body {
 .carousel-inner .item img {
   width: 100%;
   margin: auto;
+}
+.imgs{
+	max-width: 100%;
+	height: auto;
+	margin: 40px auto;
+	display: block;
 }
 /*Estilo Texto*/
 p {
@@ -84,7 +90,7 @@ p {
 }
 article{
 	color: white;
-	font-size: 2rem;
+	font-size:1.8rem;
 }
 section{
 	width: 600px;
@@ -136,7 +142,19 @@ button img{
 }
 /*Responsivo en moviles*/
 @media (min-width: 320px) and (max-width: 480px) {
-  .navbar-brand img{
+	.navbar-brand img{
 		margin-top: -47px;
+	}
+	.container{
+		padding: 80px 12px;
+	}
+	.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left{
+		left: 50%;
+		margin-left: 0;
+		margin-top: -8px;
+	}
+	.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right{
+		right: 108%;
+		margin-right: 0;
 	}
 }
