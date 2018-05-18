@@ -40,11 +40,21 @@
               <li><a href="#untangle">Untangle</a></li>
               <li><a href="#router">Router</a></li>
               <li><a href="#owncloud">Owncloud</a></li>
+              <li><a href="#gitlab">Gitlab</a></li>
             </ul>
           </li>
-          <li><a href="#robot">ROBOT</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">ROBOT
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#sigue">Sigue lineas</a></li>
+              <li><a href="#proto">Innovacion 1:Protocoder</a></li>
+              <li><a href="#inno1">Innovacion 2:Simon dice</a></li>
+              <li><a href="#inno2">Innovacion 3:Ruleta</a></li>
+            </ul>
+          </li>
           <li><a href="#video">VIDEO</a></li>
-          <!-- <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li> -->
         </ul>
       </div>
     </div>
@@ -52,13 +62,11 @@
 <!--Fin menu-->
 <!--Inicio Galeria-->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
- <!-- Indicators -->
  <ol class="carousel-indicators">
    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-   <li data-target="#myCarousel" data-slide-to="1"></li>
+   <li data -target="#myCarousel" data-slide-to="1"></li>
    <li data-target="#myCarousel" data-slide-to="2"></li>
  </ol>
- <!-- Wrapper for slides -->
  <div class="carousel-inner" role="listbox">
    <div class="item active">
      <img src="img/img1.png" alt="1">
@@ -70,7 +78,6 @@
      <img src="img/img3-2.png" alt="2">
    </div>
  </div>
- <!-- Left and right controls -->
  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
    <span class="sr-only">Previous</span>
@@ -113,47 +120,80 @@
     </div>
   </div>
 </div>
-<!--Contenedor Sobre el reto-->
+<!--Contenedor Sobre el reto y demas-->
 <div id="sobre" class="container text-center">
   <center><h3>INFORMACION SOBRE EL RETO</h3></center>
   <h3>Reto 8:roboAlmi</h3>
   <P>En este reto necesitamos 4 ordenadores. En un ordenador deberemos instalar Untangle, un sistema operativo para hacer un portal cautivo y tendrá 2 tarjetas de red.  En otro ordenador instalaremos Owncloud y crearemos un DNS con el nombre del grupo. También necesitaremos dos Robots con arduino para que uno sea un siguelineas y otro para controlarlo con el móvil. Crearemos una Wifi segura para que no se pueda hackear el robot. Haremos un video presentación de los robots y una web presentación del reto. Justo debajo esta es la arquitectura de red que hemos usado utilizando Packet Tracer</P>
   </div>
-  <div id="red" class="container text-center">
-  <h3>ESTO ES UNA PRUEBA DEL SCROLL RED</h3>
-  <img class="esc img-fluid" src="img/red.png" alt="">
+<div id="red" class="container text-center">
+  <h3>ESTE ES EL ESQUEMA DE RED</h3>
+  <img class="imgs img-fluid" src="img/red.png" alt="">
   </div>
-  <div id="untangle" class="container text-center">
-    <h3>ESTO ES UNA PRUEBA DEL SCROLL UNTANGLE</h3>
+<div id="untangle" class="container text-center">
+    <h3>UNTANGLE</h3>
+    <p>Hemos instalado el untangle en un PC que haria de servidor, tambien instalamos un portal cautivo</p>
+    <img class="imgs img-fluid" src="img/Adminlogin.jpg" alt="">
   </div>
-  <div id="router" class="container text-center">
-    <h3>ESTO ES UNA PRUEBA DEL SCROLL ROUTER</h3>
+<div id="router" class="container text-center">
+    <h3>CONFIGURACION DEL ROUTER</h3>
+    <div class="row">
+      <div class="col-sm-4 col-lg-6">
+        <img class="imgs img-fluid" src="img/dhcp.jpg" alt="">
+      </div>
+      <div class="col-sm-4 col-lg-6">
+        <img class="imgs img-fluid" src="img/ssid.jpg">
+      </div>
+    </div>
   </div>
-  <div id="owncloud" class="container text-center">
-    <h3>ESTO ES UNA PRUEBA DEL SCROLL OWNCLOUD</h3>
-
-  <section>
-    <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
-    <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
-    <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
+<div id="owncloud" class="container text-center">
+    <h3>CREACION OWNCLOUD CON DNS</h3>
+    <p>Hemos instalado un owncloud con una dns personalizada con nuestro nombre de grupo</p>
+    <div class="col-sm-4 col-lg-6">
+      <img class="imgs img-fluid" src="img/owncloud.png" alt="">
+    </div>
+    <div class="col-sm-4 col-lg-6">
+      <img class="imgs img-fluid" src="img/dns2.png">
+    </div>
   </div>
-  <div id="robot" class="container text-center">
-  <h3>ESTO ES UNA PRUEBA DEL SCROLL ROBOT</h3>
-  <section>
-    <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
-    <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
-    <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
-    <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
-  </section>
+<div id="gitlab" class="container text-center">
+    <h3>RESPOSITORIO EN GITLAB/GITHUB</h3>
+    <p>Hemos creado un respositorio online para compartir nuestro codigo</p>
+    <p><a href="https://gitlab.com/bmoveTeam/Project_Scorpio">>Ir a Gitlab</a></p>
+    <div class="col-sm-4 col-lg-6">
+      <img class="imgs img-fluid" src="img/gitlab.png" alt="">
+    </div>
   </div>
+<div id="sigue" class="container text-center">
+  <h3>INFORMACION SOBRE EL SIGUE LINEAS</h3>
+  <p>Aqui esta el codigo que hemos utilizado para el sigue linas</p>
+  <div class="col-sm-4 col-lg-6">
+    <img class="imgs img-fluid" src="img/rbot.png" alt="codigo1">
+  </div>
+  <div class="col-sm-4 col-lg-6">
+    <img class="imgs img-fluid" src="img/codigo2.png" alt="codigo2">
+  </div>
+</div>
+<div id="proto" class="container text-center">
+  <h3>INNOVACION 1: PROTOCODER</h3>
+  <p>Nos hemos basado en el cogido de bq y hemos desarollado un control personalizado para el robot</p>
+  <img class="imgs img-fluid" src="img/protocoder.png" alt="">
+</div>
+<div id="inno1" class="container text-center">
+  <h3>INNOVACION 2: SIMON DICE</h3>
+  <img class="imgs img-fluid" src="img/inno1.jpg" alt="">
+</div>
+<div id="inno2" class="container text-center">
+  <h3>INNOVACION 3: LA RULETA</h3>
+  <img class="imgs img-fluid" src="img/inno2.jpg" alt="">
+</div>
 <div id="video" class="container text-center">
-  <h3>ESTO ES UNA PRUEBA DEL SCROLL VIDEO</h3>
+  <h3>AQUI ESTA EL GRAN VIDEO</h3>
   <div class="video-container">
   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/3Wn5kwiqOIs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
 </div>
 </div>
 </body>
-<!--Fin cabecera-->
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/irarriba.js"></script>
